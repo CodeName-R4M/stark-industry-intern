@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Failed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="error-container">
+        <h1 style="color: #ff0000;">❌ AUTHENTICATION FAILED</h1>
+        <p>Security passphrase mismatch for Employee ID: {{ username }}</p>
+        <p>Access denied. This attempt has been logged.</p>
+        <a href="/" style="color: #00f0ff; text-decoration: none;">← Return to Login</a>
+    </div>
+</body>
+</html>

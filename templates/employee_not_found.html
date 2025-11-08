@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="error-container">
+        <h1 style="color: #ff8000;">🔍 EMPLOYEE NOT FOUND</h1>
+        <p>No employee record found for ID: {{ username }}</p>
+        <p>Please verify your employee identification number.</p>
+        <a href="/" style="color: #00f0ff; text-decoration: none;">← Return to Login</a>
+    </div>
+</body>
+</html>

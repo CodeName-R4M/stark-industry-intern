@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile - {{ employee.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="glow-container">
+        <div class="profile-header">
+            <h1>👤 EMPLOYEE PROFILE</h1>
+            <div class="clearance-badge">CLEARANCE: {{ employee.clearance.upper() }}</div>
+        </div>
+        
+        <div class="data-panel">
+            <h3>⟠ PERSONAL DATA</h3>
+            <p><strong>NAME:</strong> {{ employee.name }}</p>
+            <p><strong>ROLE:</strong> {{ employee.role }}</p>
+            <p><strong>ANNUAL SALARY:</strong> ${{ employee.salary }}</p>
+            <p><strong>SECURITY LEVEL:</strong> {{ employee.clearance.upper() }}</p>
+        </div>
+        
+        {% if employee.flag %}
+        <div class="flag-panel">
+            <h2>🚩 CLASSIFIED DATA ACCESSED</h2>
+            <h3>FLAG: {{ employee.flag }}</h3>
+        </div>
+        {% endif %}
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/" style="color: #00f0ff; text-decoration: none; padding: 10px 20px; border: 1px solid #00f0ff; border-radius: 5px;">⟸ RETURN TO PORTAL</a>
+        </div>
+    </div>
+</body>
+</html>
